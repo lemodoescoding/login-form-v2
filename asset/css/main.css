@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700;900&display=swap');
 
+/* ===== CSS RESET ===== */
+
 * {
 	margin: 0;
 	padding: 0;
@@ -7,9 +9,111 @@
 	font-family: "Poppins", sans-serif;
 }
 
+/* ===== BACKGROUND STYLING ===== */
+
 body {
 	min-height: 100vh;
+	background: linear-gradient(-135deg, #6ee2f5, #6454f0);
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.container {
+	width: 800px;
+	min-height: 300px;
+	background-color: rgba(255, 255, 255, .1);
+	display: flex;
+	flex-direction: row;
+	border-radius: .75rem;
+	box-shadow: 2px 2px 8px rgba(0,0,0,.4);
+	overflow: hidden;
+}
+
+/* ===== LOGIN FORM SECTION ===== */
+
+.login__form {
+	width: calc(100% - 300px);
+	padding: .5rem .9rem;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.login__header {
+	width: 100%;
+	margin: 10px 0 25px 0;
+}
+
+.login__header h3 {
+	font-size: 2.5rem;
+	text-align: center;
+	color: rgba(255, 255, 255, 1);
+	filter: drop-shadow(3px 3px 4px rgba(0,0,0,.4));
+}
+
+.login__main {
+	width: 100%;
+	margin: 40px 0;
+	padding: 0 3rem;
+}
+
+.login__main .input__field {
+	margin: 30px 0;
+	position: relative;
+	width: 100%;
+}
+
+.login__main .input__field input {
+	width: 100%;
+	font-size: 1.2rem;
+	font-weight: 300;
+	color: rgba(255, 255, 255, 1);
+	padding: .3rem 1rem;
+	background: transparent;
+	border: none;
+	outline: none;
+	border-bottom: 2px solid rgba(255, 255, 255, .4);
+}
+
+.login__main .input__field label {
+	font-size: 1.0rem;
+	color: rgba(255, 255, 255, .4);
+	position: absolute;
+	top: 50%;
+	left: 15px;
+	transform: translateY(-50%);
+	transition: all .3s;
+	pointer-events: none;
+}
+
+.login__main .input__field .highlight {
+	display: block;
+	height: 2px;
+	background-color: rgba(255, 255, 255, 1);
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	transition: all .3s;
+}
+
+.login__main .input__field input:focus ~ label,
+.login__main .input__field input:valid ~ label {
+	top: -5px;
+	color: rgba(255, 255, 255, 1);
+	font-size: .85rem;
+}
+
+.login__main .input__field input:focus ~ .highlight,
+.login__main .input__field input:valid ~ .highlight {
+	width: 100%;
+}
+
+
+/* ===== SIDE PANEL SECTION ====== */
+
+.side__panel {
+	width: 300px;
+	padding: .7rem .5rem;
+	background-color: rgba(255, 255, 255, 1);
 }

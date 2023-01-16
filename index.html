@@ -10,27 +10,35 @@
 	</head>
 	<body>
 		<div class="container">
-			<div class="login-form">
-				<header class="login-header">
+			<section class="login__form">
+				<header class="login__header">
 					<h3>Login</h3>
 				</header>
-				<main class="login-main">
+				<main class="login__main">
 					<form action="#">
-						<div class="input-field">
-							<input type="email" id="email" name="email" required />
+						<div class="input__field">
+							<input type="email" id="email" name="email" required autocomplete="off" />
 							<label for="email">Email Address...</label>
+							<span class="highlight"></span>
 						</div>
-						<div class="input-field">
-							<input type="password" id="password" name="password" required />
+						<div class="input__field">
+							<input type="password" id="password" name="password" required autocomplete="off" />
 							<label for="password">Password...</label>
+							<span class="hightlight"></span>
 						</div>
+
+						<button class="submit__btn">Login</button>
 					</form>
 				</main>
-				<footer class="login-footer">
+				<footer class="login__footer">
 					<a href="#">Forgot Password?</a>
-					<a href="#">Doesn't have an account?</a>
 				</footer>
-			</div>
+			</section>
+			<section class="side__panel">
+				<h2>Doesn't have an account?</h2>
+				<p>Lorem illo suscipit minima porro aliquam nulla? Provident minus fugit sapiente temporibus distinctio, blanditiis Debitis.</p>
+				<a href="#">Sign up to access the app</a>
+			</section>
 		</div>
 	</body>
 </html>
