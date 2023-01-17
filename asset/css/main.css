@@ -38,11 +38,11 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-}
+	}
 
 .login__header {
 	width: 100%;
-	margin: 10px 0 25px 0;
+	margin: 10px 0;
 }
 
 .login__header h3 {
@@ -54,8 +54,13 @@ body {
 
 .login__main {
 	width: 100%;
-	margin: 40px 0;
+	margin: 20px 0 30px 0;
 	padding: 0 3rem;
+}
+
+.login__main form {
+	display: flex;
+	flex-direction: column;
 }
 
 .login__main .input__field {
@@ -109,6 +114,51 @@ body {
 	width: 100%;
 }
 
+.login__main .checkbox__field {
+	margin: 20px 0;
+}
+
+.checkbox__field .checkbox {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.checkbox__field .checkbox__input {
+	display: none;
+}
+
+.checkbox__field .checkbox__box {
+	width: 1.8rem;
+	height: 1.8rem;
+	margin-right: 10px;
+	border: 2px solid rgba(255, 255, 255, .3);
+	border-radius: .3rem;
+	color: rgba(255, 255, 255, 1);
+	font-size: 1.3rem;
+	background-color: transparent;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.checkbox__field .checkbox__input:checked ~ .checkbox__box::after {
+	content: '\2714';
+}
+
+.login__main .login__btn {
+	align-self: center;
+	margin: 20px 0;
+	padding: .5rem 2rem;
+	background-color: rgba(255, 255, 255, .4);
+	color: rgba(255, 255, 255, 1);
+	font-size: 1.1rem;
+	font-weight: 700;
+	border: none;
+	outline: none;
+	cursor: pointer;
+	border-radius: 1.5rem;
+}
 
 /* ===== SIDE PANEL SECTION ====== */
 
