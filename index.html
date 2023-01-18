@@ -9,13 +9,14 @@
 		<title>Login Form v2</title>
 	</head>
 	<body>
+		<div class="imageBx"></div>
 		<div class="container">
 			<section class="login__form">
 				<header class="login__header">
 					<h3>Login</h3>
 				</header>
 				<main class="login__main">
-					<form action="#">
+					<form action="#" method="post">
 						<div class="input__field">
 							<input type="email" id="email" name="email" required autocomplete="off" />
 							<label for="email">Email Address...</label>
@@ -29,13 +30,13 @@
 
 						<div class="checkbox__field">
 							<label class="checkbox">
-								<input class="checkbox__input" type="checkbox" name="">
+								<input class="checkbox__input" type="checkbox" value="yes" name="rememberMe">
 								<div class="checkbox__box"></div>
 								Remember Me?
 							</label>
 						</div>
 
-						<button class="login__btn">Login</button>
+						<button type="submit" class="login__btn">Login</button>
 					</form>
 				</main>
 				<footer class="login__footer">
@@ -43,7 +44,7 @@
 				</footer>
 			</section>
 			<section class="side__panel">
-				<h2>Doesn't have an account?</h2>
+				<h3>Doesn't have an account?</h3>
 				<p>Lorem illo suscipit minima porro aliquam nulla? Provident minus fugit sapiente temporibus distinctio, blanditiis Debitis.</p>
 				<a href="#">Sign up to access the app</a>
 			</section>

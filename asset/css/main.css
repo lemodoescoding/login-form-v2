@@ -12,21 +12,37 @@
 /* ===== BACKGROUND STYLING ===== */
 
 body {
-	min-height: 100vh;
-	background: linear-gradient(-135deg, #6ee2f5, #6454f0);
+	height: 100vh;
+	/* background: linear-gradient(-135deg, #6ee2f5, #6454f0); */
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
 
+/* ===== BACKGROUND IMAGE ===== */
+
+.imageBx {
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	background: url(../img/bgImage1.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+/* ===== MAIN STYLING ===== */
+
 .container {
 	width: 800px;
 	min-height: 300px;
-	background-color: rgba(255, 255, 255, .1);
+	background-color: rgba(0,0,0,.5);
 	display: flex;
 	flex-direction: row;
 	border-radius: .75rem;
-	box-shadow: 2px 2px 8px rgba(0,0,0,.4);
+	box-shadow: 2px 2px 7px rgba(255,255,255,.3);
 	overflow: hidden;
 }
 
@@ -54,7 +70,7 @@ body {
 
 .login__main {
 	width: 100%;
-	margin: 20px 0 30px 0;
+	margin: 40px 0 30px 0;
 	padding: 0 3rem;
 }
 
@@ -64,14 +80,14 @@ body {
 }
 
 .login__main .input__field {
-	margin: 30px 0;
+	margin: 20px 0;
 	position: relative;
 	width: 100%;
 }
 
 .login__main .input__field input {
 	width: 100%;
-	font-size: 1.2rem;
+	font-size: 1.05rem;
 	font-weight: 300;
 	color: rgba(255, 255, 255, 1);
 	padding: .3rem 1rem;
@@ -115,10 +131,11 @@ body {
 }
 
 .login__main .checkbox__field {
-	margin: 20px 0;
 }
 
 .checkbox__field .checkbox {
+	margin: 20px 0;
+	color: rgba(255, 255, 255, 1);
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
@@ -150,20 +167,67 @@ body {
 	align-self: center;
 	margin: 20px 0;
 	padding: .5rem 2rem;
-	background-color: rgba(255, 255, 255, .4);
 	color: rgba(255, 255, 255, 1);
+	background-color: transparent;
 	font-size: 1.1rem;
-	font-weight: 700;
-	border: none;
+	font-weight: 400;
 	outline: none;
+	border: 2px solid rgba(255, 255, 255, .4);
 	cursor: pointer;
 	border-radius: 1.5rem;
+	transition: all .3s;
+}
+
+.login__main .login__btn:hover {
+	background-color: rgba(255, 255, 255, .4);
+	font-weight: 700;
+}
+
+/* ===== FOOTER LOGIN SECTION ===== */
+
+.login__footer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 10px 0;
+}
+
+.login__footer a {
+	text-decoration: none;
+	color: rgba(255, 255, 255, .7);
+	font-size: .75rem;
+}
+
+.login__footer a:hover {
+	text-decoration: underline;
+	color: rgba(255, 255, 255, 1);
 }
 
 /* ===== SIDE PANEL SECTION ====== */
 
 .side__panel {
 	width: 300px;
-	padding: .7rem .5rem;
+	padding: .7rem .8rem;
 	background-color: rgba(255, 255, 255, 1);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.side__panel h3 {
+	font-size: 1.7rem; 
+	letter-spacing: .3px;
+	margin: 5px 0;
+}
+
+.side__panel p {
+	font-size: .8rem;
+	margin: 5px 0;
+}
+
+.side__panel a {
+	font-size: .75rem;	
+	color: rgba(0,0,0,.75);
+	text-decoration: underline;
 }
